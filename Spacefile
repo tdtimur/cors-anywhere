@@ -1,0 +1,13 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: cors-anywhere
+    src: ./
+    engine: nodejs16
+    primary: true
+    run: node server.js
+    public: true
+    presets:
+      env:
+        - name: CORSANYWHERE_WHITELIST
+          default: https://youmeme.com,https://frontend-develop-fat-gorilla.youmeme.net,https://frolicking-sundae-a5b841.netlify.app
